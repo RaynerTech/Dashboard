@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/65b897467a.js" crossorigin="anonymous"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="top">
+            <h3>Rayner</h3>
+         
+        </div><!--Topo-->
+        <nav class="menu">
+            <ul>
+                <li><a href=""><i class="fa-solid fa-thumbs-up"></i> PAINEL</a></li>
+                <li><a href=""><i class="fa-solid fa-atom"></i> CONTEÚDO</a></li>
+                <li><a href=""><i class="fa-solid fa-jedi"> </i> ESTATISTICAS</a></li>
+                <li><a href=""><i class="fa-solid fa-computer"></i> CONFIGURAÇÕES</a></li>
+                <li><a href=""><i class="fa-solid fa-satellite"></i> DUVIDAS</a></li>
+                <li><a href=""><i class="fa-solid fa-hand-spock"></i> USUARIOS</a></li>
+
+            </ul>
+           
+            
+        </nav><!---Menu-->
+    </aside><!--Siderbar-->
+
+    <main class="main-con">
+        <header>
+           <section class="user">
+               <h2><i class="fa-solid fa-bars"></i></h2>
+           </section>
+            <section class="busca">
+                <div class="icon-pesquisa"><i class="fa-solid fa-magnifying-glass"></i></div><form action=""><input type="text"></form>
+            </section><!--Busca-->
+            <section class="alert-icon">
+                <P>2</P>
+                <i class="fa-solid fa-bell"></i>  
+            </section><!--bell-->
+            <div class="clear"></div>
+        </header>
+
+        <section class="main-cont1">
+            <article style="margin-bottom:10px;" class="painel">
+                <h2>Bem-vinda, Paola</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex rerum eum officia consectetur magnam odio dolore modi, expedita reiciendis, rem esse repellat qui eligendi 
+                    voluptatem! Culpa ipsum ea repellendus perspiciatis.</p>
+            </article><!--Painel-->
+
+            <article style="width: 50%; margin-right: 1%;" class="painel">
+                <h2>Bem-vinda, Paola</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex rerum eum officia consectetur magnam odio dolore modi, expedita reiciendis, rem esse repellat qui eligendi 
+                    voluptatem! Culpa ipsum ea repellendus perspiciatis.</p>
+            </article><!--Painel-->
+
+            <article style="width: 48%; margin-left: 1%;" class="painel">
+                <h2>Bem-vinda, Paola</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex rerum eum officia consectetur magnam odio dolore modi, expedita reiciendis, rem esse repellat qui eligendi 
+                    voluptatem! Culpa ipsum ea repellendus perspiciatis.</p>
+            </article><!--Painel-->
+            <div class="clear"></div>
+
+            <article style="margin-top:10px;" class="painel">
+                <h2>Bem-vinda, Paola</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex rerum eum officia consectetur magnam odio dolore modi, expedita reiciendis, rem esse repellat qui eligendi 
+                    voluptatem! Culpa ipsum ea repellendus perspiciatis.</p>
+            </article><!--Painel-->
+        </section><!--Main1-->
+        <section class="atividades">
+            <div class="top-atividades">
+                <h2>Ultimas atividades</h2>
+            </div><!--topo da atidades-->
+            
+            <article class="resistro-atividades">
+                <div class="circle-atividades"></div>
+                <h2>Há 2 minutos</h2>
+                <p>Uma Nova <b>Pagina</b> Foi inserida</p>
+            </article>
+            <article class="resistro-atividades">
+                <div class="circle-atividades"></div>
+
+                <h2>Hoje - 12:30</h2>
+                <p>Pagina <b>Contato</b>Foi Editada por Paola</p>
+            </article>
+            <article class="resistro-atividades">
+                <div class="circle-atividades"></div>
+
+                <h2>Ontem</h2>
+                <p>O pefil do <b>Usuario</b> foi alterado</p>
+            </article>
+        </section><!--Ultimas Atividades-->
+    </main>
+
+    <div class="clear"></div>
+
+    <script src=" https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+       $(function(){
+           let windoWidth = $(window)[0].innerWidth
+           if(windoWidth == 768){}
+            $('.user h2').click(function(){
+                const ani = $('.sidebar')
+                if(ani.is(':visible')){
+                    ani.hide()
+                    $('.main-cont').css('left','0')
+                }
+                else{
+                    ani.show()
+                    $('.main-cont').css('left','300px')
+                }
+
+                $(window).resize(function(){
+                    let windoWidth = $(window)[0].innerWidth
+
+                })
+            })   
+       })
+   </script>
+</body>
+</html>
